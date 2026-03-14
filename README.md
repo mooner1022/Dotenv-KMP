@@ -7,6 +7,7 @@ Kotlin Multiplatform Dotenv reader/parser library
 <p align="center">
     <a href="https://kotlinlang.org/"><img src="https://img.shields.io/badge/Kotlin-0095D5?style=for-the-badge&logo=kotlin&logoColor=white"></a>
     <a href="./"><img src="https://img.shields.io/github/repo-size/mooner1022/Dotenv-KMP?style=for-the-badge"></a>
+    <a href="https://central.sonatype.com/artifact/dev.mooner/dotenv-kmp"><img src="https://img.shields.io/maven-central/v/dev.mooner/dotenv-kmp?style=for-the-badge"></a>
     <a href="./LICENSE"><img src="https://img.shields.io/github/license/mooner1022/Dotenv-KMP?style=for-the-badge"></a>
 </p>
 
