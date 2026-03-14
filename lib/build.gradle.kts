@@ -1,10 +1,7 @@
 plugins {
-    // Apply the shared KMP build logic from a convention plugin.
-    // The shared code is located in `buildSrc/src/main/kotlin/kotlin-multiplatform.gradle.kts`.
     id("buildsrc.convention.kotlin-multiplatform")
-    // Apply Kotlin Serialization plugin from `gradle/libs.versions.toml`.
-    id("maven-publish")
     alias(libs.plugins.kotlinPluginSerialization)
+    alias(libs.plugins.mavenPublish)
 }
 
 group = "dev.mooner"
@@ -14,23 +11,47 @@ kotlin {
     sourceSets {
         commonMain {
             dependencies {
-                // Apply the kotlinx bundle of dependencies from the version catalog (`gradle/libs.versions.toml`).
                 implementation(libs.bundles.kotlinxEcosystem)
             }
         }
     }
 }
 
-publishing {
-    repositories {
-        mavenLocal()
-    }
-    publications {
-        create<MavenPublication>("maven") {
-            from(components["kotlin"])
-            groupId = project.group.toString()
-            artifactId = "dotenv-kmp"
-            version = project.version.toString()
+mavenPublishing {
+    publishToMavenCentral()
+    signAllPublications()
+
+    coordinates(
+        groupId = group.toString(),
+        artifactId = "dotenv-kmp",
+        version = version.toString(),
+    )
+
+    pom {
+        name = "Dotenv KMP"
+        description = "Kotlin Multiplatform library for loading and parsing .env files."
+        url = "https://github.com/mooner1022/Dotenv-KMP"
+        inceptionYear = "2025"
+
+        licenses {
+            license {
+                name = "MIT License"
+                url = "https://opensource.org/licenses/MIT"
+            }
+        }
+
+        developers {
+            developer {
+                id = "mooner1022"
+                name = "mooner1022"
+                url = "https://github.com/mooner1022"
+            }
+        }
+
+        scm {
+            connection = "scm:git:git://github.com/mooner1022/Dotenv-KMP.git"
+            developerConnection = "scm:git:ssh://github.com/mooner1022/Dotenv-KMP.git"
+            url = "https://github.com/mooner1022/Dotenv-KMP"
         }
     }
 }
