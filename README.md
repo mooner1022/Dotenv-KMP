@@ -1,6 +1,23 @@
-# Dotenv KMP
+# <h1 align="center">Dotenv-KMP</h1>
 
-A Kotlin Multiplatform library for loading and parsing `.env` files. Supports two dialects: the widely-used **Original** format (compatible with [motdotla/dotenv](https://github.com/motdotla/dotenv)) and the extended **Dotenvy** format with variable interpolation and heredocs.
+<p align="center">
+Kotlin Multiplatform Dotenv reader/parser library
+</p>
+
+<p align="center">
+    <a href="https://kotlinlang.org/"><img src="https://img.shields.io/badge/Kotlin-0095D5?style=for-the-badge&logo=kotlin&logoColor=white"></a>
+    <a href="./"><img src="https://img.shields.io/github/repo-size/mooner1022/Dotenv-KMP?style=for-the-badge"></a>
+    <a href="./LICENSE"><img src="https://img.shields.io/github/license/mooner1022/Dotenv-KMP?style=for-the-badge"></a>
+</p>
+
+<p align="center">
+A Kotlin Multiplatform library for loading and parsing `.env` files.<br>
+Supports two dialects: the widely-used <strong>Original</strong> format (compatible with <a href="https://github.com/motdotla/dotenv">motdotla/dotenv</a>) and the extended <strong>Dotenvy</strong> format with variable interpolation and heredocs.
+</p>
+
+<p align="center">
+    ✔ Any PRs are welcome!
+</p>
 
 ## Supported targets
 
